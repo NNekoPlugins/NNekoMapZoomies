@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/14.0.2">
+  <PropertyGroup>
+    <Name>NNekoMapZoomies</Name>
+    <Author>NaughtyNeko</Author>
+    <Punchline>Zoomies for your map!</Punchline>
+    <Description>Settings to clamp the min/max zoom in the vanilla map addon.</Description>
+    <Version>0.1</Version>
+    <Tags>NNeko,NaughtyNeko,UI,Map,Utility,Other</Tags>
+    <WarningLevel>4</WarningLevel>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+  </PropertyGroup>
+
+    <PropertyGroup>
+        <Deterministic>true</Deterministic>
+        <CopyLocalLockfileAssemblies>true</CopyLocalLockfileAssemblies>
+        <EnableWindowsTargeting>true</EnableWindowsTargeting>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <NoWarn>$(NoWarn);IDE1006,CS8618,MSB3270</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+    <Content Include="Data\NNeko.png" />
+  </ItemGroup>
+    <ItemGroup>
+        <None Update="NNekoMapZoomies.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <EmbeddedResource Include="Data\NNeko.png" />
+    </ItemGroup>
+</Project>

@@ -3,7 +3,7 @@ using System.Numerics;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Windowing;
 
-namespace SamplePlugin.Windows;
+namespace NNekoMapZoomies.Windows;
 
 public class ConfigWindow : Window, IDisposable
 {
@@ -41,10 +41,18 @@ public class ConfigWindow : Window, IDisposable
     public override void Draw()
     {
         // Can't ref a property, so use a local copy
-        var configValue = configuration.SomePropertyToBeSavedAndWithADefault;
-        if (ImGui.Checkbox("Random Config Bool", ref configValue))
+        var configValue = configuration.zMin;
+        if (ImGui.Numerics("Minimum Zoom", ref configValue))
         {
-            configuration.SomePropertyToBeSavedAndWithADefault = configValue;
+            configuration.zMin = configValue;
+            // Can save immediately on change if you don't want to provide a "Save and Close" button
+            configuration.Save();
+        }
+
+        var configValue = configuration.zMax;
+        if (ImGui.Numerics("Maximum Zoom", ref configValue))
+        {
+            configuration.zMax = configValue;
             // Can save immediately on change if you don't want to provide a "Save and Close" button
             configuration.Save();
         }

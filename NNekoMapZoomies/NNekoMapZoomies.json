@@ -1,0 +1,22 @@
+{
+  "Author": "NaughtyNeko",
+  "Name": "NNekoMapZoomies",
+  "Punchline": "Zoomies for your map!",
+  "Description": "Settings to clamp the min/max zoom in the vanilla map addon.",
+      "Tags": [
+        "nneko",
+        "naughtyneko",
+        "ui",
+        "map",
+        "utility",
+        "other"
+    ],
+    "CategoryTags": [
+        "UI",
+        "Map",
+        "Utility",
+        "Other"
+    ],
+    "IconUrl": "https://github.com/NNekoPlugins/NNekoMapZoomies/Data/NNeko.png",
+    "RepoUrl": "https://github.com/NNekoPlugins/NNekoMapZoomies"
+}
